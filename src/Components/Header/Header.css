@@ -1,0 +1,129 @@
+.header {
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    height: 98px;
+    font-weight: bold;
+}
+
+.nav {
+    margin-top: 20px;
+    width: 1220px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    top: 29px;
+    left: 110px;
+}
+
+.header-list {
+    align-self: center;
+    list-style: none;
+    display: flex;
+    margin-left: 100px;
+    gap: 20px;
+}
+
+.header-list li {
+    color: gray;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.header-list li:hover:not(.more),
+.header-list li.active:not(.more) {
+    color: #CA5C3B;
+}
+
+.header-list .more {
+    color: #CA5C3B;
+    display: flex;
+    align-items: center;
+}
+
+.header-list .dropdown-arrow {
+    margin-left: 2px;
+    height: 30px;
+    width: 30px;
+    color: #CA5C3B;
+    font-weight: bold;
+}
+
+.logo {
+    height: 40px;
+    padding-left: 20px;
+}
+
+.network-switch {
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    background-color: #EEC5C7;
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.network-switch button {
+    padding: 2px 12px;
+    border: none;
+    cursor: pointer;
+    width: 75px;
+    height: 34px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 100px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.mainnet {
+    background-color: transparent;
+    color: black;
+}
+
+.testnet {
+    background-color: transparent;
+    color: black;
+}
+
+.mainnet.active {
+    background-color: #CA5C3B;
+    color: white;
+}
+
+.testnet.active {
+    background-color: #CA5C3B;
+    color: white;
+}
+
+.mainnet.inactive {
+    transform: translateX(-75px);
+}
+
+.testnet.inactive {
+    transform: translateX(75px);
+}
+
+@media (max-width: 1440px) {
+    .header {
+        padding: 10px;
+    }
+
+    .nav {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .header-list {
+        margin-left: 0;
+        gap: 10px;
+    }
+
+    .network-switch button {
+        width: 70px;
+        height: 30px;
+    }
+}
